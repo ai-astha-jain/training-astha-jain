@@ -31,5 +31,4 @@ main()
 
 '''
 
-https://github.com/ai-astha-jain/training-astha-jain/commits?author=ai-astha-jain
 
