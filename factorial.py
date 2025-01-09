@@ -13,8 +13,8 @@ main()
 # This code will throw the error when it reches to fact(n - 1) as discussed in the session
 
 
-''' Correct way to solve the factorial by recursion
-
+#Correct way to solve the factorial by recursion
+'''
 def factorial(num):
     if num < 0:
         raise TypeError("Invalid Input")
