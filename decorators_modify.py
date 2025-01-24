@@ -33,7 +33,7 @@ def decorator(input_num):
                 print("The division is: ", f"{num1} / {num2} = {num1 / num2}")
             except ZeroDivisionError:
                 print("Invalid input.Please enetr valid input.")
-        elif chocie == 0:
+        elif choice == 0:
             break
        
 @decorator	   
