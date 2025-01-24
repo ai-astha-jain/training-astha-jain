@@ -1,9 +1,8 @@
 import time 
-from datetime import datetime
 def decorator(input_num):
 
     global start_time_code
-    start_time_code = datetime.now()
+    start_time_code = time.time()
     #print("The time when code is started : ", start_time_code)
     
     while True:
@@ -15,32 +14,21 @@ def decorator(input_num):
         else:
             print("Invalid choice. Please enter the valid choice")
             continue
+        num1 = input_num()
+        num2 = input_num()
         if choice == 1:
-            num1 = input_num()
-            num2 = input_num()
             print("The addition is: ", f"{num1} + {num2} = {num1 + num2}")
         elif choice == 2:
-            num1 = input_num()
-            num2 = input_num()
             print("The subtraction is: ", f"{num1} - {num2} = {num1 - num2}")
         elif choice == 3:
-            num1 = input_num()
-            num2 = input_num()
             print("The multiply is: ", f"{num1} * {num2} = {num1 * num2}")
         elif choice == 4:
-            num1 = input_num()
-            num2 = input_num()
             try:
                 print("The division is: ", f"{num1} / {num2} = {num1 / num2}")
             except ZeroDivisionError:
                 print("Invalid input.Please enetr valid input.")
-        elif choice == 0:
-            break
-        elif choice > 4:
-            print("Please Enter the choice between 1 to 4")
         else:
-            raise TypeError("Only integers are allowed")
-   
+            break
        
 @decorator	   
 def input_num(): 
@@ -57,6 +45,6 @@ def input_num():
             continue
 
 global end_time_code
-end_time_code = datetime.now()
+end_time_code = time.time()
 #print("The time when code has ended: ", end_time_code)
 print("total time: " ,(end_time_code - start_time_code), "seconds")
