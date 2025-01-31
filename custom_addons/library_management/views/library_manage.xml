@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+          <!--list view-->
+        <record model="ir.ui.view" id="library_manage_view_list">
+            <field name="name">library.manage.list</field>
+            <field name="model">library.manage</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="book_id"/>
+                    <field name="book_name"/>
+                    <field name="type"/>
+                    <field name="price"/>
+                    <field name="publish_date"/>
+                </list>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="library_manage_action">
+            <field name="name">Library</field>
+            <field name="res_model">library.manage</field>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="library_manage_view_list"/>
+        </record>
+
+        <menuitem id="menu_library_manage" name="Library"/>
+        <menuitem id="menu_library_books" name="Books" parent="menu_library_manage"/>
+</odoo>
+
+
+
+
