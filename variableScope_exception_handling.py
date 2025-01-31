@@ -164,6 +164,7 @@ def add_menu():
         print("1. Add Country")
         print("2. Add State")
         print("3. Add City")
+        print("4. Exit")
         try:
             choice = int(input("Enter your choice: "))
         except ValueError:
@@ -176,6 +177,8 @@ def add_menu():
             add_state()
         elif choice == 3:
             add_city()
+        elif chocie == 4:
+            break
         else:
             print("Invalid choice, try again.")
 
@@ -186,6 +189,7 @@ def delete_menu():
         print("1. Delete Country")
         print("2. Delete State")
         print("3. Delete City")
+        print("4. Exit")
         try:
             choice = int(input("Enter your choice: "))
         except ValueError:
@@ -200,6 +204,8 @@ def delete_menu():
         elif choice == 3:
             print_locations()
             delete_city()
+        elif chocie == 4:
+            break
         else:
             print("Invalid choice, try again.")
 
@@ -210,6 +216,7 @@ def update_menu():
         print("1. Update Country")
         print("2. Update State")
         print("3. Update City")
+        print("4. Exit")
         try:
             choice = int(input("Enter your choice: "))
         except ValueError:
@@ -224,6 +231,8 @@ def update_menu():
         elif choice == 3:
             print_locations()
             update_city()
+        elif chocie == 4:
+            break
         else:
             print("Invalid choice, try again.")
 
