@@ -18,9 +18,9 @@ def add_state():
             locations[country_name][state_name] = []
         else:
             print(f"State '{state_name}' already exists in country '{country_name}'.")
+        print(f"States in {country_name}:", list(locations[country_name].keys()))    
     else:
         print(f"Country '{country_name}' does not exist. Add the country first.")
-    print(f"States in {country_name}:", list(locations[country_name].keys()))
 
 def add_city():
     country_name = input("Enter the country name: ")
@@ -32,12 +32,12 @@ def add_city():
                 locations[country_name][state_name].append(city_name)
             else:
                 print(f"City '{city_name}' already exists in state '{state_name}'.")
+            print(f"Cities in {state_name}, {country_name}: {locations[country_name][state_name]}")    
         else:
             print(f"State '{state_name}' does not exist. Add the state first.")
     else:
         print(f"Country '{country_name}' does not exist. Add the country first.")
-    print(f"Cities in {state_name}, {country_name}: {locations[country_name][state_name]}")
-
+    
 # Delete functions
 def delete_country():
     country_name = input("Enter the country name to delete: ")
