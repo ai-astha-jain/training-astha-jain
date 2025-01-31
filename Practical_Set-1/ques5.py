@@ -17,6 +17,7 @@ def extract_numbers(list_of_numbers):
     valid_numbers = [num for num in list_of_numbers if is_valid_number(num)]
     return valid_numbers
 
-list_of_numbers = [7568, 6324, 3678, 2342, 6580, 8764, 9416]
-result = extract_numbers(list_of_numbers)
-print(result) 
+number_list = list(map(int, input("Enter a list of numbers separated by space: ").split()))
+result = extract_numbers(number_list)
+print("Valid numbers:", result)
+
