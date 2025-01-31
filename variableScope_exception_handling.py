@@ -44,6 +44,7 @@ def delete_country():
     if country_name in locations:
         del locations[country_name]
         print(f"Deleted country '{country_name}'.")
+        
     else:
         print(f"Country '{country_name}' not found.")
 
@@ -137,8 +138,11 @@ def menu():
         print("3. Update")
         print("4. Print Locations")
         print("5. Exit")
-        choice = int(input("Enter your choice: "))
-        
+        try:
+            choice = int(input("Enter your choice: "))
+        except ValueError:
+            print("Please enter the integers only.")
+            continue
         if choice == 1:
             add_menu()
         elif choice == 2:
@@ -155,55 +159,73 @@ def menu():
 
 # Sub-menu for adding
 def add_menu():
-    print("\n--- Add Menu ---")
-    print("1. Add Country")
-    print("2. Add State")
-    print("3. Add City")
-    choice = int(input("Enter your choice: "))
+    while True:
+        print("\n--- Add Menu ---")
+        print("1. Add Country")
+        print("2. Add State")
+        print("3. Add City")
+        try:
+            choice = int(input("Enter your choice: "))
+        except ValueError:
+            print("Please enter the integers only.")
+            continue
     
-    if choice == 1:
-        add_country()
-    elif choice == 2:
-        add_state()
-    elif choice == 3:
-        add_city()
-    else:
-        print("Invalid choice, try again.")
+        if choice == 1:
+            add_country()
+        elif choice == 2:
+            add_state()
+        elif choice == 3:
+            add_city()
+        else:
+            print("Invalid choice, try again.")
 
 # Sub-menu for deleting
 def delete_menu():
-    print("\n--- Delete Menu ---")
-    print("1. Delete Country")
-    print("2. Delete State")
-    print("3. Delete City")
-    choice = int(input("Enter your choice: "))
-    
-    if choice == 1:
-        delete_country()
-    elif choice == 2:
-        delete_state()
-    elif choice == 3:
-        delete_city()
-    else:
-        print("Invalid choice, try again.")
+    while True:
+        print("\n--- Delete Menu ---")
+        print("1. Delete Country")
+        print("2. Delete State")
+        print("3. Delete City")
+        try:
+            choice = int(input("Enter your choice: "))
+        except ValueError:
+            print("Please enter the integers only.")
+            continue
+        if choice == 1:
+            print_locations()
+            delete_country()
+        elif choice == 2:
+            print_locations()
+            delete_state()
+        elif choice == 3:
+            print_locations()
+            delete_city()
+        else:
+            print("Invalid choice, try again.")
 
 # Sub-menu for updating
 def update_menu():
-    print("\n--- Update Menu ---")
-    print("1. Update Country")
-    print("2. Update State")
-    print("3. Update City")
-    choice = int(input("Enter your choice: "))
-    
-    if choice == 1:
-        update_country()
-    elif choice == 2:
-        update_state()
-    elif choice == 3:
-        update_city()
-    else:
-        print("Invalid choice, try again.")
+    while True:
+        print("\n--- Update Menu ---")
+        print("1. Update Country")
+        print("2. Update State")
+        print("3. Update City")
+        try:
+            choice = int(input("Enter your choice: "))
+        except ValueError:
+            print("Please enter the integers only.")
+            continue
+        if choice == 1:
+            print_locations()
+            update_country()
+        elif choice == 2:
+            print_locations()
+            update_state()
+        elif choice == 3:
+            print_locations()
+            update_city()
+        else:
+            print("Invalid choice, try again.")
 
 # Run the menu
 menu()
-
