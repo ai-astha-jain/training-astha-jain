@@ -35,7 +35,7 @@ class Store:
                 
                     # months for which data is available
                     try:
-                        months = list(map(str,input("Enter the months for {product_name} in {shelf_name} (comma separated): ").split(',')))
+                        months = list(map(str,input(f"Enter the months for {product_name} in {shelf_name} (comma separated): ").split(',')))
                     except ValueError:
                         print("Please enter the months separated by comma.")
                         return True
@@ -234,33 +234,41 @@ class Store:
             
             if choice == 1:
                 self.add_store_data()
+                self.view_store_data()
             elif choice == 2:
                 self.view_store_data()
             elif choice == 3:
                 new_sale_percentage = float(input("Enter the new sale percentage to update for all products: "))
                 self.update_product_sale_price_for_all(new_sale_percentage)
+                self.view_store_data()
             elif choice == 4:
             	shelf_name = input("Enter the shelf name: ")
             	product_name = input("Enter the product name: ")
             	new_sale_percentage_shelf = float(input("Enter the new sale percentage to update for all products: "))
             	self.update_product_sale_price_for_all(new_sale_percentage_shelf)
+            	self.view_store_data()
             elif choice == 5:
                 shelf_name = input("Enter the shelf name: ")
                 product_name = input("Enter the product name: ")
                 self.set_category_product(shelf_name, product_name)
+                self.view_store_data()
             elif choice == 6:
                 self.create_new_shelf()
+                self.view_store_data()
             elif choice == 7:
                 self.reset_cost_price()
+                self.view_store_data()
             elif choice == 8:
                 shelf_name = input("Enter the shelf name: ")
                 product_name = input("Enter the product name: ")
                 self.max_min_price(shelf_name,product_name)
+                self.view_store_data()
             elif choice == 9:
                 shelf_name = input("Enter the shelf name: ")
                 product_name = input("Enter the product name: ")
                 month_name = input("Enter the month name: ")
                 self.average_cost_profit(shelf_name, product_name, month_name)
+                self.view_store_data()
             elif choice == 0:
                 break
             else:
