@@ -177,7 +177,7 @@ def add_menu():
             add_state()
         elif choice == 3:
             add_city()
-        elif chocie == 4:
+        elif choice == 4:
             break
         else:
             print("Invalid choice, try again.")
@@ -204,7 +204,7 @@ def delete_menu():
         elif choice == 3:
             print_locations()
             delete_city()
-        elif chocie == 4:
+        elif choice == 4:
             break
         else:
             print("Invalid choice, try again.")
@@ -231,7 +231,7 @@ def update_menu():
         elif choice == 3:
             print_locations()
             update_city()
-        elif chocie == 4:
+        elif choice == 4:
             break
         else:
             print("Invalid choice, try again.")
