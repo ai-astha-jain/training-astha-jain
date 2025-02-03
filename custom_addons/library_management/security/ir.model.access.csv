@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_library_management_all,library.manage all,model_library_manage,base.group_user,1,1,1,1
